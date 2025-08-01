@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contact us</h1>
+    {% for we in dsa %}
+        <div>
+            <a href="{% url 'details' slug=we.slug %}">{{ we.name }}</a>
+            <h2>
+                Roll No: {{ we.rollno }}
+            </h2>
+        </div>
+    {% endfor %}
+</body>
+</html>

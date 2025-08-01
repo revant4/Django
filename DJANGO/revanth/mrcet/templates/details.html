@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Details Page</h1>
+    <h2>{{ csd.name }}</h2>
+    <p>Roll No: {{ csd.roll_no }}</p>
+    <p>Current Semester: {{ csd.slug }}</p>
+
+    {% if csd.photo %}
+        <img src="{{ csd.photo.url }}" alt="{{ csd.name }}'s photo" style="max-width: 200px;">
+    {% else %}
+        <p>No photo available</p>
+    {% elseif %}    
+    <a href="{% url 'contact' %}">Back to Contact List</a>
+</body>
+</html>
